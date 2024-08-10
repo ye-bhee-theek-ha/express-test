@@ -32,6 +32,9 @@ var ingredients = [
     }
 ];
 
+app.get("/", (req, res) => {
+    res.send("API is running...")
+})
 
 app.get('/ingredients', function(req, res) {
     console.log("GET From SERVER");
@@ -45,4 +48,4 @@ app.post('/ingredients', function(req, res) {
     res.status(200).send("Successfully posted ingredient");
 });
 
-app.listen(6069);
+app.listen(4000, console.log(`server started`))
